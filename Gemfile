@@ -20,6 +20,7 @@ gem 'mysql2', '~> 0.3.18'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'therubyracer', :platform=>:ruby
+gem 'annotate'
 group :development do
   gem 'better_errors'
   gem 'hub', :require=>nil
@@ -35,3 +36,8 @@ group :production do
   gem 'passenger'
   gem 'rails_12factor'
 end
+gem 'rails_admin'
+gem "wysiwyg-rails", "~> 1.2.7"
+gem "font-awesome-rails"
+gem "cancancan"
+gem 'paper_trail'
