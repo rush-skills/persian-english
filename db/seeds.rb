@@ -15,8 +15,14 @@ User.create(name: "Editor",email: "editor@example.com", password: "password", pa
 
 english_words = [
 	{
-		word: "",
-		meaning: "",
+		word: "Friend",
+		meaning: "دوست",
+		usage: "باده خوریم اکنون با دوستان",
+		additional: ""
+	},
+	{
+		word: "Parents",
+		meaning: "ابوین",
 		usage: "",
 		additional: ""
 	},
@@ -24,9 +30,15 @@ english_words = [
 
 persian_words = [
 	{
-		word: "",
-		meaning: "",
-		usage: "",
+		word: "دوست",
+		meaning: "Friend",
+		usage: "That guy is a friend of mine",
+		additional: ""
+	},
+	{
+		word: "ابوین",
+		meaning: "Parents",
+		usage: "My parents are proud of me",
 		additional: ""
 	},
 ]

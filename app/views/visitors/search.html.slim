@@ -1,6 +1,6 @@
 .text-center
 	h1
-		a href="/" style="color: #449D44" Persian To English Conversion
+		a href="/" style="color: #449D44;text-decoration: none" Persian To English Conversion
 	hr style="border-color: transparent"
 	.row
 		.col-md-8
@@ -32,3 +32,6 @@
 		== render 'visitors/pword', word: word
 	- else
 		== render 'visitors/eword', word: word
+- if @words.count == 0
+	.well.text-center
+		h3 No results found
