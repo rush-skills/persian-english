@@ -12,7 +12,7 @@
 			= form_tag search_path, :method => :get, :class => "form-inline" do
 			  .form-group
 			  	= hidden_field_tag :type, "en"
-			    = text_field_tag :q, params[:q], class: "form-control", placeholder: "Search"
+			    = autocomplete_field_tag :q, params[:q], autocomplete_english_word_word_path, class: "form-control", placeholder: "Search"
 			  .form-group
 			    = submit_tag "Search", :name => nil, class: "btn btn-success btn-sm"
 
@@ -24,4 +24,4 @@
 			    = submit_tag "Search", :name => nil, class: "btn btn-success btn-sm"
 			  .form-group
 			  	= hidden_field_tag :type, "pr"
-			    = text_field_tag :q, params[:q], class: "form-control", placeholder: "Search", dir: :rtl
+			    = autocomplete_field_tag :q, params[:q], autocomplete_persian_word_word_path,class: "form-control", placeholder: "Search", dir: :rtl

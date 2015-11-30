@@ -41,3 +41,4 @@ gem "wysiwyg-rails", "~> 1.2.7"
 gem "font-awesome-rails"
 gem "cancancan"
 gem 'paper_trail'
+gem 'rails4-autocomplete'

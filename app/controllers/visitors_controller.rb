@@ -1,4 +1,6 @@
 class VisitorsController < ApplicationController
+  autocomplete :english_word, :word, :full => true
+  autocomplete :persian_word, :word, :full => true
 	def home
 	end
 	def phome
