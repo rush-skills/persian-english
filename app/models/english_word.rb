@@ -16,6 +16,14 @@ class EnglishWord < ActiveRecord::Base
 
 	validates_presence_of :word, :meaning
 
+	def self.search(search)
+	  if search
+	    where('word LIKE ?', "%#{search}%")
+	  else
+	    all
+	  end
+	end
+
 	rails_admin do
 		show do
 			field :word
@@ -57,5 +65,13 @@ class EnglishWord < ActiveRecord::Base
 		    end
 		  end
 		end
+	end
+
+	def to_s
+		self.word
+	end
+
+	def name
+		self.word
 	end
 end

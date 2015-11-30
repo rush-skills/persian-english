@@ -1,0 +1,17 @@
+.well.well-sm
+	h3 style="color: #449D44; margin-top: 10px"
+	  = word.word
+	h4
+		strong Persian: 
+		.rtl
+			= word.meaning
+	- if word.usage.present?
+		h4
+			strong Usage: 
+			.rtl
+				= word.usage
+	- if word.additional.present?
+		h4
+			strong Additional Info: 
+			.rtl
+				= word.additional.html_safe

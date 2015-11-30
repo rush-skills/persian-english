@@ -1,0 +1,27 @@
+.row
+	.col-md-6.col-md-offset-3
+		ul.nav-tabs.nav.nav-justified#myTabs
+			li.active role="presentation"
+				a href="#e2p" aria-controls="e2p" role="tab" data-toggle="tab" English to Persian
+			li role="presentation"
+				a href="#p2e" aria-controls="p2e" role="tab" data-toggle="tab" Persian to English
+.row.tab-content
+	.tab-pane.active.fade.in role="tabpanel" id="e2p"
+		.col-md-6.col-md-offset-3
+			hr style="border-color: transparent"
+			= form_tag search_path, :method => :get, :class => "form-inline" do
+			  .form-group
+			  	= hidden_field_tag :type, "en"
+			    = text_field_tag :q, params[:q], class: "form-control", placeholder: "Search"
+			  .form-group
+			    = submit_tag "Search", :name => nil, class: "btn btn-success btn-sm"
+
+	.tab-pane.fade role="tabpanel" id="p2e"
+		.col-md-6.col-md-offset-3
+			hr style="border-color: transparent"
+			= form_tag search_path, :method => :get, :class => "form-inline" do
+			  .form-group
+			    = submit_tag "Search", :name => nil, class: "btn btn-success btn-sm"
+			  .form-group
+			  	= hidden_field_tag :type, "pr"
+			    = text_field_tag :q, params[:q], class: "form-control", placeholder: "Search", dir: :rtl

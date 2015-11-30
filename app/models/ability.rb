@@ -33,6 +33,7 @@ class Ability
       can :access, :rails_admin       # only allow admin users to access Rails Admin
       can :dashboard                  # allow access to dashboard
       if user.admin?
+        can :history, :all             # allow superadmins to do anything
         can :manage, :all             # allow superadmins to do anything
       elsif user.editor?
         can :edit, [EnglishWord,PersianWord]  # allow editors to just edit the words

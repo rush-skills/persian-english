@@ -1,0 +1,16 @@
+.well.well-sm
+	h3 style="color: #449D44; margin-top: 10px"
+		.rtl
+		  = word.word
+	h4
+		strong English: 
+		= word.meaning
+	- if word.usage.present?
+		h4
+			strong Usage: 
+			= word.usage
+	- if word.additional.present?
+		h4
+			strong Additional Info: 
+			p
+				= word.additional.html_safe
